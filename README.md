@@ -1,3 +1,11 @@
+# Changes made
+As part of the lab, I extended the original binary classification task (HAM and SPAM) to a multi-class problem by introducing a third label: MARKETING. To support this, I:
+- Created new labeling functions using keyword patterns (e.g., "sale", "discount", "buy now") to detect marketing-oriented spam.
+- Updated the LabelModel and MajorityLabelVoter with cardinality=3 to handle the third class.
+- Visualized class probabilities to ensure correct label distribution across all three classes.
+- Replaced the baseline Logistic Regression classifier with XGBoost, improving the accuracy due to its ability to handle noisy and sparse text data better.
+- Tried different Classifier like Random Forest, LinearSVM, XGBoost, Multinomial Naive Bayes for accuracy comparison.
+
 # The Significance of Data Labeling and the Role of Snorkel in Enhancing Machine Learning
 
 In the realm of machine learning (ML) and artificial intelligence (AI), data is the bedrock upon which models are built and refined. However, raw data, while abundant, often lacks the structure and organization necessary for effective learning. This is where data labeling comes into play. Data labeling is the process of annotating or tagging data points with relevant metadata or labels, providing context and meaning to otherwise unstructured information. This process is crucial for numerous reasons, and its importance cannot be overstated in the development and deployment of ML models.
